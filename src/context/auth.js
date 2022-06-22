@@ -33,7 +33,7 @@ export const Authprovaider= ({children})=> {
         if( senha === "123")
         {
             setUser(loggedUser)
-            navigate("/")
+            navigate("/escolhas")
         }
 
 

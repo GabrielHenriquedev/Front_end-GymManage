@@ -7,9 +7,13 @@ import{
 }from "react-router-dom"
 import Login from './ConpoLogin/Login';
 import { AuthContext, Authprovaider } from "./context/auth";
+import Choicespage from "./pages/Choicespage";
 import Contatopage from "./pages/Contatopage";
 import Homepage from "./pages/Homepage";
 import Parceriaspage from "./pages/Parceriaspage";
+import ProfessorCadpage from "./pages/ProfessorCadpage";
+import ProfessorChoicespage from "./pages/ProfessorChoicespage";
+import ProfessorListpage from "./pages/ProfessorListpage";
 import Sobrepage from "./pages/Sobrepage";
 
 
@@ -41,25 +45,47 @@ function AppRouter (){
                 <Route 
                     exact
                     path="/"  
-                    element={ <Private> <Homepage /> </Private>
+                    element={  <Homepage /> 
                 }/>
 
                 <Route 
                     exact
                     path="/sobre"  
-                    element={ <Private> <Sobrepage /> </Private>
+                    element={  <Sobrepage /> 
                 }/>
 
                 <Route 
                     exact
                     path="/contato"  
-                    element={ <Private> <Contatopage /> </Private>
+                    element={  <Contatopage /> 
                 }/>
 
                 <Route 
                     exact
                     path="/parcerias"  
-                    element={ <Private> <Parceriaspage /> </Private>
+                    element={  <Parceriaspage /> 
+                }/>
+
+                <Route 
+                    exact
+                    path="/escolhas"  
+                    element={ <Private> <Choicespage /> </Private>
+                }/>
+
+                <Route 
+                    exact
+                    path="/operarprofessor"  
+                    element={ <Private> <ProfessorChoicespage /> </Private>
+                }/>
+                <Route 
+                    exact
+                    path="/prof_cadastro"  
+                    element={ <Private> <ProfessorCadpage/> </Private>
+                }/>
+                 <Route 
+                    exact
+                    path="/prof_list"  
+                    element={ <Private> <ProfessorListpage/> </Private>
                 }/>
             </Routes>
             </Authprovaider>

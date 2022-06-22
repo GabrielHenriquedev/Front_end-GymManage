@@ -1,8 +1,8 @@
 import '../css/login.css';
 import React, {useState,useContext} from "react"
-import Header from '../static/Header/Header';
 
 import { AuthContext } from '../context/auth';
+import HeaderLogin from '../static/Header/HeaderLogin';
 
 function Login(){
 
@@ -20,7 +20,7 @@ function Login(){
  
     return (
      <div>
-       <Header/>
+       <HeaderLogin/>
                <div className="container">
                   
                   <h1>Login</h1>
