@@ -7,6 +7,9 @@ import{
 }from "react-router-dom"
 import Login from './ConpoLogin/Login';
 import { AuthContext, Authprovaider } from "./context/auth";
+import AlunoCadpage from "./pages/AlunoCadpage";
+import AlunoChoicespage from "./pages/AlunoChocespages";
+import AlunoListPage from "./pages/AlunoListpage";
 import Choicespage from "./pages/Choicespage";
 import Contatopage from "./pages/Contatopage";
 import Homepage from "./pages/Homepage";
@@ -86,6 +89,21 @@ function AppRouter (){
                     exact
                     path="/prof_list"  
                     element={ <Private> <ProfessorListpage/> </Private>
+                }/>
+                 <Route 
+                    exact
+                    path="/operaraluno"  
+                    element={ <Private> <AlunoChoicespage/> </Private>
+                }/>
+                  <Route 
+                    exact
+                    path="/aluno_cadastro"  
+                    element={ <Private> <AlunoCadpage/> </Private>
+                }/>
+                   <Route 
+                    exact
+                    path="/aluno_list"  
+                    element={ <Private> <AlunoListPage/> </Private>
                 }/>
             </Routes>
             </Authprovaider>

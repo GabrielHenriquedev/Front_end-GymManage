@@ -20,37 +20,37 @@ function ProfessorListpage(){
             <div>
                 <HeaderLogin/>
                 <div>
-        <div class="table">
-            <table class="dados">
-                <tr>
-                    <td>Nome</td>
-                    <td>sobrenome</td>
-                    <td>email</td>
-                    <td>cpf</td>
-                    <td>CREF</td>
-                    <td>telefone</td> 
-                    <td>Aulas</td>
-                    <td>Excluir</td>
-                </tr>
-                <tr>
-                    <td>{user?.login}</td>
-                    <td>{user?.bio}</td>
-                    <td>{user?.login}</td>
-                    <td>{user?.bio}</td>
-                    <td>{user?.login}</td>
-                    <td>{user?.bio}</td>
-                    <td>{user?.bio}</td>
-                    <td> 
-                        <img src={lixo} alt=""/>
-                        </td>
-                </tr>
-            </table>
-        </div>
+                    <div class="table">
+                        <table class="dados">
+                            <tr>
+                                <td>Nome</td>
+                                <td>sobrenome</td>
+                                <td>email</td>
+                                <td>cpf</td>
+                                <td>CREF</td>
+                                <td>telefone</td> 
+                                <td>Aulas</td>
+                                <td>Excluir</td>
+                            </tr> 
+                            <tr>
+                                <td>{user?.login}</td>
+                                <td>{user?.bio}</td>
+                                <td>{user?.login}</td>
+                                <td>{user?.bio}</td>
+                                <td>{user?.login}</td>
+                                <td>{user?.bio}</td>
+                                <td>{user?.bio}</td>
+                                <td> 
+                                    <img src={lixo} alt=""/>
+                                    </td>
+                            </tr>
+                        </table>
+                    </div>
 
-        <a href="/operarprofessor">
-            <label class="buttonlogin">voltar</label>
-        </a>
-    </div>  
+                        <a href="/operarprofessor">
+                            <label class="buttonlogin">voltar</label>
+                        </a>
+                </div>  
             </div>
         )
 

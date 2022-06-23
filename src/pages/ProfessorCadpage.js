@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import HeaderLogin from '../static/Header/HeaderLogin';
-import '../css/ProfessorCadPageCss.css';
+import '../css/CadPageCss.css';
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
 function ProfessorCadpage(){
@@ -125,7 +125,7 @@ function ProfessorCadpage(){
                                 <div class="buttons">
 
                                     <input type="reset"  name="b2" value="Limpar"/>
-                                    <button type="submit" name="b1"  href="/operarprofessor">enviar</button>
+                                    <button type="submit" name="b1" >enviar</button>
                                 </div>
 
                         </form>
