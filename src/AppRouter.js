@@ -12,6 +12,9 @@ import AlunoChoicespage from "./pages/AlunoChocespages";
 import AlunoListPage from "./pages/AlunoListpage";
 import Choicespage from "./pages/Choicespage";
 import Contatopage from "./pages/Contatopage";
+import FichaCadPage from "./pages/FichaCadpage";
+import FichaChoicespage from "./pages/FichaChoicespage";
+import FichaListpage from "./pages/FichaListpage";
 import Homepage from "./pages/Homepage";
 import Parceriaspage from "./pages/Parceriaspage";
 import ProfessorCadpage from "./pages/ProfessorCadpage";
@@ -105,7 +108,23 @@ function AppRouter (){
                     path="/aluno_list"  
                     element={ <Private> <AlunoListPage/> </Private>
                 }/>
+                  <Route 
+                    exact
+                    path="/operarficha"  
+                    element={ <Private> <FichaChoicespage/> </Private>
+                }/>
+                  <Route 
+                    exact
+                    path="/ficha_cadastro"  
+                    element={ <Private> <FichaCadPage/> </Private>
+                }/>
+                <Route 
+                    exact
+                    path="/ficha_list"  
+                    element={ <Private> <FichaListpage/> </Private>
+                }/>
             </Routes>
+                
             </Authprovaider>
         </Router>
     )

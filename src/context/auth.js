@@ -35,15 +35,15 @@ export const Authprovaider= ({children})=> {
             setUser(loggedUser)
             navigate("/escolhas")
         }
-
-
-        
     }
 
 
 
     const logout =() =>{
         console.log("to fora")
+        localStorage.removeItem("user")
+        setUser(null)
+        navigate("/login")
     }
 
 

@@ -54,6 +54,19 @@
     margin-left: 32px;
   }
   
+  button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 7px;
+    width: 15%;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+  }
+  button:hover{
+    background-color: rgb(152, 155, 6);
+    cursor: pointer;
+  }
   
 
   
