@@ -1,6 +1,6 @@
 import '../css/login.css';
 import React, {useState,useContext} from "react"
-
+import { validEmail, validPassword } from "../utils/regex";
 import { AuthContext } from '../context/auth';
 import HeaderLogin from '../static/Header/HeaderLogin';
 
@@ -11,6 +11,21 @@ function Login(){
   const [email,setEmail]= useState("");
   const [senha,setSenha]= useState("");
 
+  const [emailErr,setEmailErr]= useState("");
+  const [senhaErr,setSenhaErr]= useState("");
+
+  const validate = () => {
+    if (!validEmail.test(email)) {
+      setEmailErr(true);
+    } else {
+      setEmailErr(false);
+    }
+    if (!validPassword.test(senha)) {
+      setSenhaErr(true);
+    } else {
+      setSenhaErr(false);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,6 +51,7 @@ function Login(){
                                 value={email} 
                                 onChange={(e)=> setEmail(e.target.value)} />                     
                         </div>
+                        {emailErr && <p>Por favor digete um email valido!</p>}
                       
                         <div className="form-group">
                             <input 
@@ -46,8 +62,10 @@ function Login(){
                                 value={senha} 
                                 onChange={(e)=> setSenha(e.target.value)}/>
                         </div>
+                        {senhaErr && <p>Por favor digete um email valido!</p>}
                         <br />
                             <button 
+                              onClick={validate}
                                 className="button"
                                 type="submit">
                                       Login
